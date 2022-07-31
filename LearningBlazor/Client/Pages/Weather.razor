@@ -4,7 +4,11 @@
 <h3>Weather</h3>
 @foreach(var forecast in forecasts)
 {
-	<Forecast Outlook="@forecast.Summary" Temperature="@forecast.TemperatureC.ToString()" DayOfWeek="@forecast.Date.DayOfWeek">
+	<Forecast Outlook="@forecast.Summary" Temperature="@forecast.TemperatureC.ToString()" 
+		DayOfWeek="@forecast.Date.DayOfWeek"
+		Selected="@forecast.Selected"
+		OnSelected="@OnForecastSelected"
+		>
 		<CustomMessage>
 			@if(forecast.Summary == "Rainy")
 			{
@@ -19,6 +23,14 @@
 
 @code {
 	WeatherForecast[] forecasts;
+
+	void OnForecastSelected(DayOfWeek dayOfWeek)
+	{
+		foreach(var forecast in forecasts)
+		{
+			forecast.Selected = forecast.Date.DayOfWeek == dayOfWeek;
+		}
+	}
 
 	protected override void OnInitialized()
 	{

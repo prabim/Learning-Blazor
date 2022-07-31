@@ -92,6 +92,14 @@ using Telerik.Blazor.Components;
 #nullable restore
 #line 10 "C:\Users\Brabim Manandhar\source\repos\LearningBlazor\LearningBlazor\Client\Pages\Forecast.razor"
        
+	[Parameter] public bool Selected { get; set; } = false;
+	string SelectedCss => Selected ? "forecast-item-selected" : String.Empty;
+	[Parameter] public EventCallback<DayOfWeek> OnSelected { get; set; }
+
+	void HandleOnSelected()
+	{
+		OnSelected.InvokeAsync(this.DayOfWeek);
+	}
 	[Parameter] public string Outlook { get; set; }
 	[Parameter] public string Temperature { get; set; }
 	[Parameter] public DayOfWeek DayOfWeek { get; set; }

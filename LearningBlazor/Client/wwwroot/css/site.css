@@ -183,4 +183,8 @@ a, .btn-link {
 }
 
 /*Custom CSS*/
-
+.forecast-item-selected {
+    border: solid 1px !important;
+    padding: 5px !important;
+    background-color: #f8f8f8 !important;
+}

@@ -98,9 +98,17 @@ using LearningBlazor.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 20 "C:\Users\Brabim Manandhar\source\repos\LearningBlazor\LearningBlazor\Client\Pages\Weather.razor"
+#line 24 "C:\Users\Brabim Manandhar\source\repos\LearningBlazor\LearningBlazor\Client\Pages\Weather.razor"
        
 	WeatherForecast[] forecasts;
+
+	void OnForecastSelected(DayOfWeek dayOfWeek)
+	{
+		foreach(var forecast in forecasts)
+		{
+			forecast.Selected = forecast.Date.DayOfWeek == dayOfWeek;
+		}
+	}
 
 	protected override void OnInitialized()
 	{
