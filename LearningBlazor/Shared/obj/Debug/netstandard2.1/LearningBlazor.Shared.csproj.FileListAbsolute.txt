@@ -1,0 +1,10 @@
+C:\Users\Brabim Manandhar\source\repos\LearningBlazor\LearningBlazor\Shared\bin\Debug\netstandard2.1\LearningBlazor.Shared.deps.json
+C:\Users\Brabim Manandhar\source\repos\LearningBlazor\LearningBlazor\Shared\bin\Debug\netstandard2.1\LearningBlazor.Shared.dll
+C:\Users\Brabim Manandhar\source\repos\LearningBlazor\LearningBlazor\Shared\bin\Debug\netstandard2.1\LearningBlazor.Shared.pdb
+C:\Users\Brabim Manandhar\source\repos\LearningBlazor\LearningBlazor\Shared\obj\Debug\netstandard2.1\LearningBlazor.Shared.csproj.AssemblyReference.cache
+C:\Users\Brabim Manandhar\source\repos\LearningBlazor\LearningBlazor\Shared\obj\Debug\netstandard2.1\LearningBlazor.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Brabim Manandhar\source\repos\LearningBlazor\LearningBlazor\Shared\obj\Debug\netstandard2.1\LearningBlazor.Shared.AssemblyInfoInputs.cache
+C:\Users\Brabim Manandhar\source\repos\LearningBlazor\LearningBlazor\Shared\obj\Debug\netstandard2.1\LearningBlazor.Shared.AssemblyInfo.cs
+C:\Users\Brabim Manandhar\source\repos\LearningBlazor\LearningBlazor\Shared\obj\Debug\netstandard2.1\LearningBlazor.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Brabim Manandhar\source\repos\LearningBlazor\LearningBlazor\Shared\obj\Debug\netstandard2.1\LearningBlazor.Shared.dll
+C:\Users\Brabim Manandhar\source\repos\LearningBlazor\LearningBlazor\Shared\obj\Debug\netstandard2.1\LearningBlazor.Shared.pdb
