@@ -650,3 +650,5 @@ C:\Users\Brabim Manandhar\source\repos\LearningBlazor\LearningBlazor\Client\obj\
 C:\Users\Brabim Manandhar\source\repos\LearningBlazor\LearningBlazor\Client\obj\Debug\net5.0\refint\LearningBlazor.Client.dll
 C:\Users\Brabim Manandhar\source\repos\LearningBlazor\LearningBlazor\Client\obj\Debug\net5.0\LearningBlazor.Client.pdb
 C:\Users\Brabim Manandhar\source\repos\LearningBlazor\LearningBlazor\Client\obj\Debug\net5.0\ref\LearningBlazor.Client.dll
+C:\Users\Brabim Manandhar\source\repos\LearningBlazor\LearningBlazor\Client\obj\Debug\net5.0\RazorDeclaration\Pages\LengthConverter.razor.g.cs
+C:\Users\Brabim Manandhar\source\repos\LearningBlazor\LearningBlazor\Client\obj\Debug\net5.0\Razor\Pages\LengthConverter.razor.g.cs
