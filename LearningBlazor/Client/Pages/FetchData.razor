@@ -6,41 +6,35 @@
 
 <p>This component demonstrates fetching data from the server.</p>
 
-@if (forecasts == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var forecast in forecasts)
-            {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+<TelerikGrid Data="@forecasts"
+    Sortable="true"
+    Pageable="true" PageSize="@PageSize"
+    FilterMode="GridFilterMode.FilterMenu">
+     <GridToolBar>
+        Select Page Size: <TelerikDropDownList Data="@PageSizesList" @bind-Value="@PageSize" Width="60px" />
+        <TelerikPager Total="@TotalLength" @bind-Page="@CurrentPage" PageSize="@PageSize" />
+    </GridToolBar>
+    <GridColumns>
+        <GridColumn Field="@nameof(WeatherForecast.Date)"></GridColumn>
+        <GridColumn Field="@nameof(WeatherForecast.TemperatureC)"
+            Title="Temp (C)"></GridColumn>
+        <GridColumn Field="@nameof(WeatherForecast.TemperatureF)"
+            Title="Temmp (F)"></GridColumn>
+        <GridColumn Field="@nameof(WeatherForecast.Summary)"></GridColumn>
+    </GridColumns>
+</TelerikGrid>
 
 @code {
+    public int PageSize { get; set; } = 5;
+    public int CurrentPage { get; set; } = 1;
+    protected List<int> PageSizesList = new List<int>() { 5, 10, 15, 20, };
     WeatherForecast[] forecasts;
+    public int TotalLength = 0;
 
     protected override async Task OnInitializedAsync()
     {
         forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
+        TotalLength = forecasts.Length;
     }
 
 }

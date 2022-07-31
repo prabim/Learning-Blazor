@@ -98,13 +98,18 @@ using LearningBlazor.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "C:\Users\Brabim Manandhar\source\repos\LearningBlazor\LearningBlazor\Client\Pages\FetchData.razor"
+#line 27 "C:\Users\Brabim Manandhar\source\repos\LearningBlazor\LearningBlazor\Client\Pages\FetchData.razor"
        
+    public int PageSize { get; set; } = 5;
+    public int CurrentPage { get; set; } = 1;
+    protected List<int> PageSizesList = new List<int>() { 5, 10, 15, 20, };
     WeatherForecast[] forecasts;
+    public int TotalLength = 0;
 
     protected override async Task OnInitializedAsync()
     {
         forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
+        TotalLength = forecasts.Length;
     }
 
 
